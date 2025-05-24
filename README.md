@@ -1,7 +1,8 @@
 # MarioGameOnDocker
 Mario Game Deployment On Docker
 
-![Mario Game WebApp](./mario-game-webapp.png)
+![image](https://github.com/user-attachments/assets/1062e296-8003-4109-8457-619a64cb462e)
+
 
 - My Mario Game Docker Image is present here - https://hub.docker.com/r/jinny1/mario-game
 
