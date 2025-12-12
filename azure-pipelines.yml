@@ -1,6 +1,6 @@
+
 # Docker
 # Build and push an image to Azure Container Registry
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
 - main
@@ -9,14 +9,11 @@ resources:
 - repo: self
 
 variables:
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'fd992a2e-055b-46b2-9da9-a1ba3e4fc9b5'
+  dockerRegistryServiceConnection: 'fd992a2e-055b-46b2-9da9-a1ba3e4fc9b5'  # ACR service connection (name or ID)
   imageRepository: 'ijerishwetamariogameondocker'
   containerRegistry: 'azurecontainer11.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-
-  # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
@@ -28,6 +25,8 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
+    - checkout: self
+
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
@@ -35,5 +34,7 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+        tags: 
+            $(tag)
+
+               
