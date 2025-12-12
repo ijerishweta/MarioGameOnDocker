@@ -37,3 +37,18 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+    
+    
+    - task: SSH@0
+      inputs:
+        sshEndpoint: 'SSH-SC'
+        runOptions: 'commands'
+        commands: |
+          sudo docker pull $(containerRegistry)/$(imageName):$(tag)
+                    sudo docker stop mario-game || true
+                    sudo docker rm mario-game || true
+                    sudo docker run -d -p 80:80 --name mario
+        readyTimeout: '20000'
+
+    
