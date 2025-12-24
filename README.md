@@ -5,6 +5,9 @@ Mario Game Deployment On Docker
 
 <img width="1864" height="949" alt="image" src="https://github.com/user-attachments/assets/ad74170d-d57f-424d-ac7a-4446f089869e" />
 
+<img width="1917" height="891" alt="image" src="https://github.com/user-attachments/assets/1200a043-e8fd-4d6b-8e04-7dc86c4c7b6f" />
+
+
 <img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/21939c43-3cc3-403a-8226-f4b2b4b7e61b" />
 
 
