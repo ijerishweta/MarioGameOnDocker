@@ -3,6 +3,10 @@ Mario Game Deployment On Docker
 
 ![image](https://github.com/user-attachments/assets/1062e296-8003-4109-8457-619a64cb462e)
 
+<img width="1864" height="949" alt="image" src="https://github.com/user-attachments/assets/ad74170d-d57f-424d-ac7a-4446f089869e" />
+
+<img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/21939c43-3cc3-403a-8226-f4b2b4b7e61b" />
+
 
 - My Mario Game Docker Image is present here - https://hub.docker.com/r/jinny1/mario-game
 
