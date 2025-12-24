@@ -1,1 +1,29 @@
 
+trigger:
+- main
+
+pool:
+  name: Pool
+
+stages:
+  - stage: DockerBuild
+    jobs:
+      - job: 'dockerbuild'
+        steps:
+        - task: Docker@2
+          inputs:
+            containerRegistry: 'PushDockerImageToACR'
+            repository: 'MarioGame'
+            command: 'buildAndPush'
+            Dockerfile: '**/Dockerfile'
+
+  - stage: DeploytoAppService
+    jobs:
+      - job: 'deploytoappservice'
+        steps:
+        - task: AzureWebAppContainer@1
+          inputs:
+            azureSubscription: 'AzureServiceConnection-SC'
+            appName: 'MarioGameApplication'
+            containers: 'MarioGame'
+
